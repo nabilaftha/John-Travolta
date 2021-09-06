@@ -1,19 +1,23 @@
 waktu_kerja = int(input("Masukkan Jam Kerja : "))
-gaji = 15000 * 40
-waktu_lembur = waktu_kerja - 40
-gaji_lembur = 1.5 * 15000 * waktu_lembur
-total = gaji + gaji_lembur
+gaji = 15000
+
+#fungsi menghitung gaji
+if waktu_kerja > 40:
+    gaji_pokok = gaji * 40
+    waktu_lembur = waktu_kerja - 40
+    gaji_lembur = (1.5 * 15000) * waktu_lembur
+    total = gaji_pokok + gaji_lembur
+else:
+    total = gaji * waktu_kerja
 
 pemasukan = int(total)
 pengeluaran = 600000
-
 count = pemasukan - pengeluaran
 
+#fungsi menghitung tabungan
 if pemasukan > pengeluaran:
     print('anda bisa menabung sebesar : ' + str(count))
-# Ketika kedua variable memiliki nilai yang sama, cetak 'Anda dapat membeli apel tetapi dompet Anda akan menjadi kosong'
 elif pemasukan == pengeluaran:
     print('anda tidak bisa menabung')
-
 else:
     print('cari tambahan sebesar : ' + str(count * -1))
