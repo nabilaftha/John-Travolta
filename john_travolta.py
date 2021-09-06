@@ -11,7 +11,7 @@ else:
     total = gaji * waktu_kerja
 
 pemasukan = int(total)
-pengeluaran = 600000
+pengeluaran = int(input("Masukkan Pengeluaran : "))
 count = pemasukan - pengeluaran
 
 #fungsi menghitung tabungan
